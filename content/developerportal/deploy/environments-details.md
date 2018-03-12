@@ -69,9 +69,9 @@ If your app is hosted in Mendix Cloud v4, you will see a section named **Scaling
 
 In **Scaling**, there are two sliders that you can control:
 
-* Use the **Instances** slider to increase or decrease the amount from one to four instances by sliding the slider
+* Use the **Instances** slider to increase or decrease the amount from one to ten instances by sliding the slider
    * The instances are meant for improved resiliency and increased processing power
-   * The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among four instances if you have more than 1GB of RAM memory
+   * The minimum amount of RAM memory per instances is 1GB; you can spread the RAM memory among the instances if you have more than 1GB of RAM memory per instance
 * Use the **Memory per instance** slider to increase or decrease the memory amount per instance by sliding the slider
 
 The **Total Allocated Memory** is a process circle that shows how much memory is currently used for scaling.
