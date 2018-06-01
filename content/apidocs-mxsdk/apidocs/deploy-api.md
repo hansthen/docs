@@ -53,6 +53,7 @@ List of objects with the following key-value pairs:
 *   _ProjectId_ (String): Developer Portal Project identifier.
 *   _Url_ (String): Production or sandbox URL to access your app.
 
+
 #### 3.1.3.1 Example
 
 ```bash
@@ -61,6 +62,7 @@ List of objects with the following key-value pairs:
     "Url": "https://calc.mendixcloud.com",
     "ProjectId": "fae5de74-69c2-4488-a4de-abf89daac63e",
     "AppId": "calc"
+
 },{
     "Name": "Tic Tac Toc",
     "Url": "https://tictactoc.mendixcloud.com",
@@ -216,7 +218,13 @@ List of objects with the following key-value pairs:
 
 *   _Status_ (String): Status of the environment. Possible values: Empty, Stopped, Running
 *   _Url_ (String): URL to access your application.
-*   Mode (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+*   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
+
+Introduced in Cloud Portal version 175:
+
+*   _ModelVersion_ (String): The Version of the application Model currently deployed to this environment. 
+*   _MendixVersion_ (String): The Mendix Version of the application Model currentlt deployed to this environment.
+*   _Production_ (Boolean): If this is a production environment.
 
 #### 3.4.3.1 Example
 
@@ -225,12 +233,20 @@ List of objects with the following key-value pairs:
     {
         "Status" :  "Stopped" ,
         "Mode" :  "Acceptance",
-        "Url" :  "https://calc-accp.mendixcloud.com
+        "Url" :  "https://calc-accp.mendixcloud.com,
+        "ModelVersion": "17.0.1.3251",
+        "MendixVersion": "6.10.12",
+        "Production": "true"
+
     },
     {
         "Status" :  "Stopped" ,
         "Mode" :  "Production",
-        "Url" :  "https://calc.mendixcloud.com"
+        "Url" :  "https://calc.mendixcloud.com",
+        "ModelVersion": "17.0.1.3251",
+        "MendixVersion": "6.10.12",
+        "Production": "true"
+
     }
 ]
 ```
@@ -271,6 +287,12 @@ An object with the following key-value pairs:
 *   _Url_ (String): URL to access your application.
 *   _Mode_ (String): Mode of the environment. Possible values: Test, Acceptance, Production.
 
+Introduced in Cloud Portal version 175:
+
+*   _ModelVersion_ (String): The Version of the application Model currently deployed to this environment. 
+*   _MendixVersion_ (String): The Mendix Version of the application Model currentlt deployed to this environment.
+*   _Production_ (Boolean): If this is a production environment.
+
 #### 3.5.3.1 Error Codes
 
 | HTTP Status | Error code | Description |
@@ -286,6 +308,9 @@ An object with the following key-value pairs:
      "Status" :  "Stopped" ,
      "Mode" :  "Acceptance",
      "Url" :  "https://calc-accp.mendixcloud.com"
+     "ModelVersion": "17.0.1.3251",
+     "MendixVersion": "6.10.12",
+     "Production": "true"
 }
 ```
 
